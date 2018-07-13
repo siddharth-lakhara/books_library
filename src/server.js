@@ -13,3 +13,10 @@ server.start((err) => {
   if (err) { console.log(err); }
   console.log('Server started');
 });
+
+process.on('SIGINT', () => {
+  console.log('Stopping server');
+  server.stop({}, () => {
+    process.exit(0);
+  });
+});
