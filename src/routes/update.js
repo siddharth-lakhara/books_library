@@ -31,8 +31,8 @@ module.exports = [{
   method: 'GET',
   path: '/update',
   handler: (_, reply) => {
-    const booksUrl = 'https://5gj1qvkc5h.execute-api.us-east-1.amazonaws.com/dev/allBooks';
-    const ratingsUrl = 'https://5gj1qvkc5h.execute-api.us-east-1.amazonaws.com/dev/findBookById/';
+    const booksUrl = 'https://ko3jyc6mmh.execute-api.us-east-2.amazonaws.com/dev/bookLibraryStore';
+    const ratingsUrl = 'https://9kvhg9h7h1.execute-api.us-east-2.amazonaws.com/dev/rating/';
     getBooksData(booksUrl).then((books) => {
       initializeLikes(books);
       getBookRatings(ratingsUrl, books).then((objectToInsert) => {
