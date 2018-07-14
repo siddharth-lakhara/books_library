@@ -17,5 +17,7 @@ Front end: ReactJS<br />
 ```
 git clone https://github.com/siddharth-lakhara/books_library.git
 npm install
-npm start
+node_modules/.bin/sequelize db:create
+node_modules/.bin/sequelize db:migrate
+node src/server.js #Starts server at port 8080
 ```
